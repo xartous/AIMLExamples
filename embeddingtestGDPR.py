@@ -1,3 +1,4 @@
+import textwrap
 from typing import Any, List, Tuple, Dict
 import numpy as np
 import openai
@@ -129,4 +130,4 @@ def answer_with_gpt(query: str, df: pd.DataFrame, document_embeddings: Dict[Tupl
 # Usage
 prompt = "Do I have permission to review my information?"
 response, sections_tokens = answer_with_gpt(prompt, df, document_embeddings)
-print(response)
+print(textwrap.fill(response, initial_indent='', subsequent_indent='    '))
