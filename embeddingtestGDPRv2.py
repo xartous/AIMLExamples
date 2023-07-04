@@ -69,7 +69,6 @@ def compute_doc_embeddings(df: pd.DataFrame) -> Dict[Tuple[str, str], List[float
 
 document_embeddings = compute_doc_embeddings(df)
 
-
 def chunks(data, batch_size):
     for i in range(0, len(data), batch_size):
         yield list(data.items())[i:i + batch_size]

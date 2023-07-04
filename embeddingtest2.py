@@ -3,9 +3,10 @@ import pandas as pd
 import tiktoken
 import numpy as np
 
-# Set your OpenAI API key
-api_key = "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"
-openai.api_key = api_key
+
+# Load OpenAI API key
+with open("apikey_openai.txt") as file:
+    openai.api_key = file.readline().strip()
 
 # Define short texts
 texts = ["This is the first short text.", "This is the second short text about devils and hell.", "This is the third short text."]
